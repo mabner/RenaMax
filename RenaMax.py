@@ -12,17 +12,18 @@ print()
 files_counter = 0
 
 with os.scandir(path_folder) as files_and_folders:
-	for element in files_and_folders:
-		if element.is_file():
-			tuple_root_ext = os.path.splitext(element.path)
-			root = tuple_root_ext[0]  # filename
-			ext = tuple_root_ext[1]  # file extension
+    for element in files_and_folders:
+        if element.is_file():
 
-			if ext == old_extension:
-				new_path = root + new_extension
-				os.rename(element.path, new_path)
-				files_counter += 1
-				print(format(new_path))
+		# Using multiple assignments
+            # filename, extension
+            root, ext = os.path.splitext(element.path)
+
+            if ext == old_extension:
+                new_path = root + new_extension
+                os.rename(element.path, new_path)
+                files_counter += 1
+                print(format(new_path))
 
 print()
 print('Changing from {} to {}'.format(old_extension, new_extension))
