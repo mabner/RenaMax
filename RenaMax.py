@@ -22,6 +22,7 @@ with os.scandir(path_folder) as files_and_folders:
 				new_path = root + new_extension
 				os.rename(element.path, new_path)
 				files_counter += 1
+				print(format(new_path))
 
 print()
 print('Changing from {} to {}'.format(old_extension, new_extension))
