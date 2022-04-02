@@ -1,6 +1,15 @@
 import os
 
-path_dir = (input('Enter the folder path [default: root]: ') or '.')
+print()
+print('▒██████╗░███████╗███╗░░██╗░█████╗░███╗░░░███╗░█████╗░██╗░░██╗')
+print('▒██╔══██╗██╔════╝████╗░██║██╔══██╗████╗░████║██╔══██╗╚██╗██╔╝')
+print('▒██████╔╝█████╗░░██╔██╗██║███████║██╔████╔██║███████║░╚███╔╝░')
+print('▒██╔══██╗██╔══╝░░██║╚████║██╔══██║██║╚██╔╝██║██╔══██║░██╔██╗░')
+print('▒██║░░██║███████╗██║░╚███║██║░░██║██║░╚═╝░██║██║░░██║██╔╝╚██╗')
+print('▒╚═╝░░╚═╝╚══════╝╚═╝░░╚══╝╚═╝░░╚═╝╚═╝░░░░░╚═╝╚═╝░░╚═╝╚═╝░░╚═╝')
+print()
+
+path_dir = (input('Enter the folder path [root]: ') or '.')
 path_folder = path_dir
 
 print()
@@ -16,7 +25,7 @@ with os.scandir(path_folder) as files_and_folders:
     for element in files_and_folders:
         if element.is_file():
 
-		# Using multiple assignments
+            # Using multiple assignments
             # filename, extension
             root, ext = os.path.splitext(element.path)
 
