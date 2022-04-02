@@ -1,6 +1,7 @@
 import os
 
-path_folder = r'.'
+path_dir = (input('Enter the folder path [default: root]: ') or '.')
+path_folder = path_dir
 
 print()
 print('Path: {}'.format(path_folder))
