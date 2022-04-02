@@ -1,6 +1,6 @@
 import os
 
-path_folder = r'\\'
+path_folder = r'.'
 
 print()
 print('Path: {}'.format(path_folder))
